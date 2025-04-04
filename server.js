@@ -13,7 +13,7 @@ app.use(cors());
 app.use(express.json());
 
 // Database connection
-mongoose.connect(process.env.MONGODB_URI,{
+mongoose.connect('mongodb+srv://aniketroy:fan-data-entry@cluster0.7wjpa5k.mongodb.net/auth_app?retryWrites=true&w=majority&appName=Cluster0' ,{
       useNewUrlParser: true,
       useUnifiedTopology: true
 })
