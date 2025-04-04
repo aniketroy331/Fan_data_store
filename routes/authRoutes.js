@@ -20,7 +20,7 @@ router.post('/signup', async (req, res) => {
     await user.save();
 
     // Generate token
-    const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, { expiresIn: '24h' });
+    const token = jwt.sign({ userId: user._id }, '9eee75143d722178353079853a6daf32b016546b5e0744576c6f202d2126a4d6', { expiresIn: '24h' });
 
     res.status(201).json({ 
       message: 'Account created successfully!', 
@@ -50,7 +50,7 @@ router.post('/login', async (req, res) => {
     }
 
     // Generate token
-    const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, { expiresIn: '24h' });
+    const token = jwt.sign({ userId: user._id }, '9eee75143d722178353079853a6daf32b016546b5e0744576c6f202d2126a4d6', { expiresIn: '24h' });
 
     res.json({ 
       message: 'Login successful', 
